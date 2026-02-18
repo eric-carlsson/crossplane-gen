@@ -26,6 +26,7 @@ func CRDToXRDv2(crd *apiextensionsv1.CustomResourceDefinition) (*xpv2.CompositeR
 			Group:    crd.Spec.Group,
 			Names:    crd.Spec.Names,
 			Versions: convertVersions(crd.Spec.Versions),
+			Scope:    xpv2.CompositeResourceScope(crd.Spec.Scope),
 		},
 	}
 
