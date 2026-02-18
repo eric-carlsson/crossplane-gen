@@ -71,6 +71,13 @@ func convertSchema(crdSchema *apiextensionsv1.CustomResourceValidation) *xpv2.Co
 		return nil
 	}
 
+	// Remove props required by CRD but not XRD
+	if props := crdSchema.OpenAPIV3Schema.Properties; props != nil {
+		delete(props, "apiVersion")
+		delete(props, "kind")
+		delete(props, "metadata")
+	}
+
 	// Marshal schema, as CompositeResourceValidation requires runtime.RawExtension
 	raw, err := json.Marshal(crdSchema.OpenAPIV3Schema)
 	if err != nil {
