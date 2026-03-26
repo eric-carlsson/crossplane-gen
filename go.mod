@@ -5,8 +5,8 @@ go 1.25.6
 require (
 	github.com/crossplane/crossplane/v2 v2.1.4
 	github.com/spf13/cobra v1.10.2
-	k8s.io/apiextensions-apiserver v0.35.1
-	k8s.io/apimachinery v0.35.1
+	k8s.io/apiextensions-apiserver v0.35.3
+	k8s.io/apimachinery v0.35.3
 	sigs.k8s.io/controller-tools v0.20.1
 )
 
@@ -46,7 +46,7 @@ require (
 	google.golang.org/grpc v1.79.1 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	k8s.io/api v0.35.1 // indirect
+	k8s.io/api v0.35.3 // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20260127142750-a19766b6e2d4 // indirect
 	k8s.io/utils v0.0.0-20260210185600-b8788abfbbc2 // indirect
